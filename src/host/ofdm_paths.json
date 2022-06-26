@@ -1,0 +1,14 @@
+{
+    "composable": {
+        "ps": {
+            "ci": {
+                        "port": 0,
+                        "Description": "Stream In"
+                },
+            "pi": {
+                        "port": 0,
+                        "Description": "Stream Out"
+            }
+        }
+    }
+}

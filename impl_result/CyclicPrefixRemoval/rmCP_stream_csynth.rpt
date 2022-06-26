@@ -1,0 +1,187 @@
+
+
+================================================================
+== Vitis HLS Report for 'rmCP_stream'
+================================================================
+* Date:           Wed Jun 22 17:23:37 2022
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+* Project:        RM_CP
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  3.688 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-------+-------+---------+
+    |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline|
+    |   min   |   max   |    min   |    max   |  min  |  max  |   Type  |
+    +---------+---------+----------+----------+-------+-------+---------+
+    |    61569|    61569|  0.616 ms|  0.616 ms|  61570|  61570|       no|
+    +---------+---------+----------+----------+-------+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------------------------------+--------------------------------------+---------+---------+-----------+-----------+------+------+---------+
+        |                                                 |                                      |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+        |                     Instance                    |                Module                |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+        +-------------------------------------------------+--------------------------------------+---------+---------+-----------+-----------+------+------+---------+
+        |grp_rmCP_stream_Pipeline_VITIS_LOOP_11_1_fu_64   |rmCP_stream_Pipeline_VITIS_LOOP_11_1  |      315|      315|   3.150 us|   3.150 us|   315|   315|       no|
+        |grp_rmCP_stream_Pipeline_VITIS_LOOP_14_2_fu_76   |rmCP_stream_Pipeline_VITIS_LOOP_14_2  |     4098|     4098|  40.980 us|  40.980 us|  4098|  4098|       no|
+        |grp_rmCP_stream_Pipeline_VITIS_LOOP_20_4_fu_96   |rmCP_stream_Pipeline_VITIS_LOOP_20_4  |      293|      293|   2.930 us|   2.930 us|   293|   293|       no|
+        |grp_rmCP_stream_Pipeline_VITIS_LOOP_23_5_fu_108  |rmCP_stream_Pipeline_VITIS_LOOP_23_5  |     4098|     4098|  40.980 us|  40.980 us|  4098|  4098|       no|
+        +-------------------------------------------------+--------------------------------------+---------+---------+-----------+-----------+------+------+---------+
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_19_3  |    57148|    57148|      4396|          -|          -|    13|        no|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     26|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        0|    -|     259|    344|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|    169|    -|
+|Register         |        -|    -|      21|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|     280|    539|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|      1|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +-------------------------------------------------+--------------------------------------+---------+----+----+----+-----+
+    |                     Instance                    |                Module                | BRAM_18K| DSP| FF | LUT| URAM|
+    +-------------------------------------------------+--------------------------------------+---------+----+----+----+-----+
+    |control_s_axi_U                                  |control_s_axi                         |        0|   0|  43|  42|    0|
+    |grp_rmCP_stream_Pipeline_VITIS_LOOP_11_1_fu_64   |rmCP_stream_Pipeline_VITIS_LOOP_11_1  |        0|   0|  11|  65|    0|
+    |grp_rmCP_stream_Pipeline_VITIS_LOOP_14_2_fu_76   |rmCP_stream_Pipeline_VITIS_LOOP_14_2  |        0|   0|  97|  86|    0|
+    |grp_rmCP_stream_Pipeline_VITIS_LOOP_20_4_fu_96   |rmCP_stream_Pipeline_VITIS_LOOP_20_4  |        0|   0|  11|  65|    0|
+    |grp_rmCP_stream_Pipeline_VITIS_LOOP_23_5_fu_108  |rmCP_stream_Pipeline_VITIS_LOOP_23_5  |        0|   0|  97|  86|    0|
+    +-------------------------------------------------+--------------------------------------+---------+----+----+----+-----+
+    |Total                                            |                                      |        0|   0| 259| 344|    0|
+    +-------------------------------------------------+--------------------------------------+---------+----+----+----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |                          Variable Name                         | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |j_3_fu_142_p2                                                   |         +|   0|  0|  13|           4|           1|
+    |grp_rmCP_stream_Pipeline_VITIS_LOOP_14_2_fu_76_outStrm_TREADY   |       and|   0|  0|   2|           1|           1|
+    |grp_rmCP_stream_Pipeline_VITIS_LOOP_23_5_fu_108_outStrm_TREADY  |       and|   0|  0|   2|           1|           1|
+    |icmp_ln19_fu_136_p2                                             |      icmp|   0|  0|   9|           4|           3|
+    +----------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                                           |          |   0|  0|  26|          10|           6|
+    +----------------------------------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------------+----+-----------+-----+-----------+
+    |             Name            | LUT| Input Size| Bits| Total Bits|
+    +-----------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                    |  65|         14|    1|         14|
+    |inStrm_TREADY_int_regslice   |  25|          5|    1|          5|
+    |j_fu_60                      |   9|          2|    4|          8|
+    |outStrm_TDATA_int_regslice   |  14|          3|   64|        192|
+    |outStrm_TKEEP_int_regslice   |  14|          3|    8|         24|
+    |outStrm_TLAST_int_regslice   |  14|          3|    1|          3|
+    |outStrm_TSTRB_int_regslice   |  14|          3|    8|         24|
+    |outStrm_TVALID_int_regslice  |  14|          3|    1|          3|
+    +-----------------------------+----+-----------+-----+-----------+
+    |Total                        | 169|         36|   88|        273|
+    +-----------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------------------------------------+----+----+-----+-----------+
+    |                             Name                             | FF | LUT| Bits| Const Bits|
+    +--------------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                     |  13|   0|   13|          0|
+    |grp_rmCP_stream_Pipeline_VITIS_LOOP_11_1_fu_64_ap_start_reg   |   1|   0|    1|          0|
+    |grp_rmCP_stream_Pipeline_VITIS_LOOP_14_2_fu_76_ap_start_reg   |   1|   0|    1|          0|
+    |grp_rmCP_stream_Pipeline_VITIS_LOOP_20_4_fu_96_ap_start_reg   |   1|   0|    1|          0|
+    |grp_rmCP_stream_Pipeline_VITIS_LOOP_23_5_fu_108_ap_start_reg  |   1|   0|    1|          0|
+    |j_fu_60                                                       |   4|   0|    4|          0|
+    +--------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                         |  21|   0|   21|          0|
+    +--------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------+-----+-----+------------+------------------+--------------+
+|       RTL Ports       | Dir | Bits|  Protocol  |   Source Object  |    C Type    |
++-----------------------+-----+-----+------------+------------------+--------------+
+|s_axi_control_AWVALID  |   in|    1|       s_axi|           control|        scalar|
+|s_axi_control_AWREADY  |  out|    1|       s_axi|           control|        scalar|
+|s_axi_control_AWADDR   |   in|    4|       s_axi|           control|        scalar|
+|s_axi_control_WVALID   |   in|    1|       s_axi|           control|        scalar|
+|s_axi_control_WREADY   |  out|    1|       s_axi|           control|        scalar|
+|s_axi_control_WDATA    |   in|   32|       s_axi|           control|        scalar|
+|s_axi_control_WSTRB    |   in|    4|       s_axi|           control|        scalar|
+|s_axi_control_ARVALID  |   in|    1|       s_axi|           control|        scalar|
+|s_axi_control_ARREADY  |  out|    1|       s_axi|           control|        scalar|
+|s_axi_control_ARADDR   |   in|    4|       s_axi|           control|        scalar|
+|s_axi_control_RVALID   |  out|    1|       s_axi|           control|        scalar|
+|s_axi_control_RREADY   |   in|    1|       s_axi|           control|        scalar|
+|s_axi_control_RDATA    |  out|   32|       s_axi|           control|        scalar|
+|s_axi_control_RRESP    |  out|    2|       s_axi|           control|        scalar|
+|s_axi_control_BVALID   |  out|    1|       s_axi|           control|        scalar|
+|s_axi_control_BREADY   |   in|    1|       s_axi|           control|        scalar|
+|s_axi_control_BRESP    |  out|    2|       s_axi|           control|        scalar|
+|ap_local_block         |  out|    1|  ap_ctrl_hs|       rmCP_stream|  return value|
+|ap_clk                 |   in|    1|  ap_ctrl_hs|       rmCP_stream|  return value|
+|ap_rst_n               |   in|    1|  ap_ctrl_hs|       rmCP_stream|  return value|
+|interrupt              |  out|    1|  ap_ctrl_hs|       rmCP_stream|  return value|
+|inStrm_TDATA           |   in|   64|        axis|   inStrm_V_data_V|       pointer|
+|inStrm_TVALID          |   in|    1|        axis|   inStrm_V_last_V|       pointer|
+|inStrm_TREADY          |  out|    1|        axis|   inStrm_V_last_V|       pointer|
+|inStrm_TLAST           |   in|    1|        axis|   inStrm_V_last_V|       pointer|
+|inStrm_TKEEP           |   in|    8|        axis|   inStrm_V_keep_V|       pointer|
+|inStrm_TSTRB           |   in|    8|        axis|   inStrm_V_strb_V|       pointer|
+|outStrm_TDATA          |  out|   64|        axis|  outStrm_V_data_V|       pointer|
+|outStrm_TVALID         |  out|    1|        axis|  outStrm_V_last_V|       pointer|
+|outStrm_TREADY         |   in|    1|        axis|  outStrm_V_last_V|       pointer|
+|outStrm_TLAST          |  out|    1|        axis|  outStrm_V_last_V|       pointer|
+|outStrm_TKEEP          |  out|    8|        axis|  outStrm_V_keep_V|       pointer|
+|outStrm_TSTRB          |  out|    8|        axis|  outStrm_V_strb_V|       pointer|
++-----------------------+-----+-----+------------+------------------+--------------+
+

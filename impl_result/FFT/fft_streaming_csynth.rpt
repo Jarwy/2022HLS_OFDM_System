@@ -1,0 +1,292 @@
+
+
+================================================================
+== Vitis HLS Report for 'fft_streaming'
+================================================================
+* Date:           Thu Jun 23 11:56:53 2022
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+* Project:        FFT_HLS
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+-----------+------------+
+    |  Clock |  Target  | Estimated | Uncertainty|
+    +--------+----------+-----------+------------+
+    |ap_clk  |  20.00 ns|  13.787 ns|     5.40 ns|
+    +--------+----------+-----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+-----------+----------+-----------+-------+-----------+---------+
+    |   Latency (cycles)  |  Latency (absolute)  |      Interval     | Pipeline|
+    |   min   |    max    |    min   |    max    |  min  |    max    |   Type  |
+    +---------+-----------+----------+-----------+-------+-----------+---------+
+    |    65909|  100729181|  1.318 ms|  2.015 sec|  65910|  100729182|       no|
+    +---------+-----------+----------+-----------+-------+-----------+---------+
+
+    + Detail: 
+        * Instance: 
+        +----------------------------------------------------+-----------------------------------------+---------+---------+-----------+-----------+------+---------+---------+
+        |                                                    |                                         |  Latency (cycles) |   Latency (absolute)  |    Interval    | Pipeline|
+        |                      Instance                      |                  Module                 |   min   |   max   |    min    |    max    |  min |   max   |   Type  |
+        +----------------------------------------------------+-----------------------------------------+---------+---------+-----------+-----------+------+---------+---------+
+        |grp_fft_streaming_Pipeline_VITIS_LOOP_89_1_fu_202   |fft_streaming_Pipeline_VITIS_LOOP_89_1   |     4098|     4098|  81.960 us|  81.960 us|  4098|     4098|       no|
+        |grp_fft_streaming_Pipeline_VITIS_LOOP_32_1_fu_234   |fft_streaming_Pipeline_VITIS_LOOP_32_1   |     8194|     8194|   0.164 ms|   0.164 ms|  8194|     8194|       no|
+        |grp_fft_streaming_Pipeline_3_fu_242                 |fft_streaming_Pipeline_3                 |     4098|     4098|  81.960 us|  81.960 us|  4098|     4098|       no|
+        |grp_fft_streaming_Pipeline_4_fu_248                 |fft_streaming_Pipeline_4                 |     4098|     4098|  81.960 us|  81.960 us|  4098|     4098|       no|
+        |grp_fft_stage_fu_254                                |fft_stage                                |       24|  8388630|   0.480 us|  0.168 sec|    24|  8388630|       no|
+        |grp_fft_streaming_Pipeline_5_fu_279                 |fft_streaming_Pipeline_5                 |     4098|     4098|  81.960 us|  81.960 us|  4098|     4098|       no|
+        |grp_fft_streaming_Pipeline_6_fu_285                 |fft_streaming_Pipeline_6                 |     4098|     4098|  81.960 us|  81.960 us|  4098|     4098|       no|
+        |grp_fft_streaming_Pipeline_7_fu_291                 |fft_streaming_Pipeline_7                 |     4098|     4098|  81.960 us|  81.960 us|  4098|     4098|       no|
+        |grp_fft_streaming_Pipeline_8_fu_297                 |fft_streaming_Pipeline_8                 |     4098|     4098|  81.960 us|  81.960 us|  4098|     4098|       no|
+        |grp_fft_streaming_Pipeline_9_fu_303                 |fft_streaming_Pipeline_9                 |     4098|     4098|  81.960 us|  81.960 us|  4098|     4098|       no|
+        |grp_fft_streaming_Pipeline_10_fu_309                |fft_streaming_Pipeline_10                |     4098|     4098|  81.960 us|  81.960 us|  4098|     4098|       no|
+        |grp_fft_streaming_Pipeline_11_fu_315                |fft_streaming_Pipeline_11                |     4098|     4098|  81.960 us|  81.960 us|  4098|     4098|       no|
+        |grp_fft_streaming_Pipeline_12_fu_321                |fft_streaming_Pipeline_12                |     4098|     4098|  81.960 us|  81.960 us|  4098|     4098|       no|
+        |grp_fft_streaming_Pipeline_13_fu_327                |fft_streaming_Pipeline_13                |     4098|     4098|  81.960 us|  81.960 us|  4098|     4098|       no|
+        |grp_fft_streaming_Pipeline_14_fu_333                |fft_streaming_Pipeline_14                |     4098|     4098|  81.960 us|  81.960 us|  4098|     4098|       no|
+        |grp_fft_streaming_Pipeline_15_fu_339                |fft_streaming_Pipeline_15                |     4098|     4098|  81.960 us|  81.960 us|  4098|     4098|       no|
+        |grp_fft_streaming_Pipeline_16_fu_345                |fft_streaming_Pipeline_16                |     4098|     4098|  81.960 us|  81.960 us|  4098|     4098|       no|
+        |grp_fft_streaming_Pipeline_17_fu_351                |fft_streaming_Pipeline_17                |     4098|     4098|  81.960 us|  81.960 us|  4098|     4098|       no|
+        |grp_fft_streaming_Pipeline_18_fu_357                |fft_streaming_Pipeline_18                |     4098|     4098|  81.960 us|  81.960 us|  4098|     4098|       no|
+        |grp_fft_streaming_Pipeline_19_fu_363                |fft_streaming_Pipeline_19                |     4098|     4098|  81.960 us|  81.960 us|  4098|     4098|       no|
+        |grp_fft_streaming_Pipeline_20_fu_369                |fft_streaming_Pipeline_20                |     4098|     4098|  81.960 us|  81.960 us|  4098|     4098|       no|
+        |grp_fft_streaming_Pipeline_21_fu_375                |fft_streaming_Pipeline_21                |     4098|     4098|  81.960 us|  81.960 us|  4098|     4098|       no|
+        |grp_fft_streaming_Pipeline_22_fu_381                |fft_streaming_Pipeline_22                |     4098|     4098|  81.960 us|  81.960 us|  4098|     4098|       no|
+        |grp_fft_streaming_Pipeline_23_fu_387                |fft_streaming_Pipeline_23                |     4098|     4098|  81.960 us|  81.960 us|  4098|     4098|       no|
+        |grp_fft_streaming_Pipeline_24_fu_393                |fft_streaming_Pipeline_24                |     4098|     4098|  81.960 us|  81.960 us|  4098|     4098|       no|
+        |grp_fft_streaming_Pipeline_25_fu_399                |fft_streaming_Pipeline_25                |     4098|     4098|  81.960 us|  81.960 us|  4098|     4098|       no|
+        |grp_fft_streaming_Pipeline_26_fu_405                |fft_streaming_Pipeline_26                |     4098|     4098|  81.960 us|  81.960 us|  4098|     4098|       no|
+        |grp_fft_streaming_Pipeline_VITIS_LOOP_123_2_fu_411  |fft_streaming_Pipeline_VITIS_LOOP_123_2  |     4098|     4098|  81.960 us|  81.960 us|  4098|     4098|       no|
+        +----------------------------------------------------+-----------------------------------------+---------+---------+-----------+-----------+------+---------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     26|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |       16|   15|    2770|   4470|    -|
+|Memory           |       32|    -|       0|      0|    0|
+|Multiplexer      |        -|    -|       -|   1211|    -|
+|Register         |        -|    -|      84|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |       48|   15|    2854|   5707|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |       17|    6|       2|     10|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +----------------------------------------------------+-----------------------------------------+---------+----+------+------+-----+
+    |                      Instance                      |                  Module                 | BRAM_18K| DSP|  FF  |  LUT | URAM|
+    +----------------------------------------------------+-----------------------------------------+---------+----+------+------+-----+
+    |control_s_axi_U                                     |control_s_axi                            |        0|   0|    43|    42|    0|
+    |grp_fft_stage_fu_254                                |fft_stage                                |       16|  15|  1850|  2551|    0|
+    |grp_fft_streaming_Pipeline_10_fu_309                |fft_streaming_Pipeline_10                |        0|   0|    29|    64|    0|
+    |grp_fft_streaming_Pipeline_11_fu_315                |fft_streaming_Pipeline_11                |        0|   0|    29|    64|    0|
+    |grp_fft_streaming_Pipeline_12_fu_321                |fft_streaming_Pipeline_12                |        0|   0|    29|    64|    0|
+    |grp_fft_streaming_Pipeline_13_fu_327                |fft_streaming_Pipeline_13                |        0|   0|    29|    64|    0|
+    |grp_fft_streaming_Pipeline_14_fu_333                |fft_streaming_Pipeline_14                |        0|   0|    29|    64|    0|
+    |grp_fft_streaming_Pipeline_15_fu_339                |fft_streaming_Pipeline_15                |        0|   0|    29|    64|    0|
+    |grp_fft_streaming_Pipeline_16_fu_345                |fft_streaming_Pipeline_16                |        0|   0|    29|    64|    0|
+    |grp_fft_streaming_Pipeline_17_fu_351                |fft_streaming_Pipeline_17                |        0|   0|    29|    64|    0|
+    |grp_fft_streaming_Pipeline_18_fu_357                |fft_streaming_Pipeline_18                |        0|   0|    29|    64|    0|
+    |grp_fft_streaming_Pipeline_19_fu_363                |fft_streaming_Pipeline_19                |        0|   0|    29|    64|    0|
+    |grp_fft_streaming_Pipeline_20_fu_369                |fft_streaming_Pipeline_20                |        0|   0|    29|    64|    0|
+    |grp_fft_streaming_Pipeline_21_fu_375                |fft_streaming_Pipeline_21                |        0|   0|    29|    64|    0|
+    |grp_fft_streaming_Pipeline_22_fu_381                |fft_streaming_Pipeline_22                |        0|   0|    29|    64|    0|
+    |grp_fft_streaming_Pipeline_23_fu_387                |fft_streaming_Pipeline_23                |        0|   0|    29|    64|    0|
+    |grp_fft_streaming_Pipeline_24_fu_393                |fft_streaming_Pipeline_24                |        0|   0|    29|    64|    0|
+    |grp_fft_streaming_Pipeline_25_fu_399                |fft_streaming_Pipeline_25                |        0|   0|    29|    64|    0|
+    |grp_fft_streaming_Pipeline_26_fu_405                |fft_streaming_Pipeline_26                |        0|   0|    29|    64|    0|
+    |grp_fft_streaming_Pipeline_3_fu_242                 |fft_streaming_Pipeline_3                 |        0|   0|    29|    64|    0|
+    |grp_fft_streaming_Pipeline_4_fu_248                 |fft_streaming_Pipeline_4                 |        0|   0|    29|    64|    0|
+    |grp_fft_streaming_Pipeline_5_fu_279                 |fft_streaming_Pipeline_5                 |        0|   0|    29|    64|    0|
+    |grp_fft_streaming_Pipeline_6_fu_285                 |fft_streaming_Pipeline_6                 |        0|   0|    29|    64|    0|
+    |grp_fft_streaming_Pipeline_7_fu_291                 |fft_streaming_Pipeline_7                 |        0|   0|    29|    64|    0|
+    |grp_fft_streaming_Pipeline_8_fu_297                 |fft_streaming_Pipeline_8                 |        0|   0|    29|    64|    0|
+    |grp_fft_streaming_Pipeline_9_fu_303                 |fft_streaming_Pipeline_9                 |        0|   0|    29|    64|    0|
+    |grp_fft_streaming_Pipeline_VITIS_LOOP_123_2_fu_411  |fft_streaming_Pipeline_VITIS_LOOP_123_2  |        0|   0|    17|   111|    0|
+    |grp_fft_streaming_Pipeline_VITIS_LOOP_32_1_fu_234   |fft_streaming_Pipeline_VITIS_LOOP_32_1   |        0|   0|   109|   164|    0|
+    |grp_fft_streaming_Pipeline_VITIS_LOOP_89_1_fu_202   |fft_streaming_Pipeline_VITIS_LOOP_89_1   |        0|   0|    55|    66|    0|
+    +----------------------------------------------------+-----------------------------------------+---------+----+------+------+-----+
+    |Total                                               |                                         |       16|  15|  2770|  4470|    0|
+    +----------------------------------------------------+-----------------------------------------+---------+----+------+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +-------------+-------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |    Memory   |          Module         | BRAM_18K| FF| LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +-------------+-------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |Stage_R_1_U  |Stage_R_1_RAM_AUTO_1R1W  |        8|  0|   0|    0|  4096|   32|     1|       131072|
+    |Stage_I_1_U  |Stage_R_1_RAM_AUTO_1R1W  |        8|  0|   0|    0|  4096|   32|     1|       131072|
+    |Stage_R_U    |Stage_R_RAM_AUTO_1R1W    |        8|  0|   0|    0|  4096|   32|     1|       131072|
+    |Stage_I_U    |Stage_R_RAM_AUTO_1R1W    |        8|  0|   0|    0|  4096|   32|     1|       131072|
+    +-------------+-------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |Total        |                         |       32|  0|   0|    0| 16384|  128|     4|       524288|
+    +-------------+-------------------------+---------+---+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-------------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |                           Variable Name                           | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |grp_fft_streaming_Pipeline_VITIS_LOOP_123_2_fu_411_outStrm_TREADY  |       and|   0|  0|   2|           1|           1|
+    |ap_block_state11_on_subcall_done                                   |        or|   0|  0|   2|           1|           1|
+    |ap_block_state15_on_subcall_done                                   |        or|   0|  0|   2|           1|           1|
+    |ap_block_state19_on_subcall_done                                   |        or|   0|  0|   2|           1|           1|
+    |ap_block_state23_on_subcall_done                                   |        or|   0|  0|   2|           1|           1|
+    |ap_block_state27_on_subcall_done                                   |        or|   0|  0|   2|           1|           1|
+    |ap_block_state31_on_subcall_done                                   |        or|   0|  0|   2|           1|           1|
+    |ap_block_state35_on_subcall_done                                   |        or|   0|  0|   2|           1|           1|
+    |ap_block_state39_on_subcall_done                                   |        or|   0|  0|   2|           1|           1|
+    |ap_block_state43_on_subcall_done                                   |        or|   0|  0|   2|           1|           1|
+    |ap_block_state47_on_subcall_done                                   |        or|   0|  0|   2|           1|           1|
+    |ap_block_state51_on_subcall_done                                   |        or|   0|  0|   2|           1|           1|
+    |ap_block_state7_on_subcall_done                                    |        or|   0|  0|   2|           1|           1|
+    +-------------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                                              |          |   0|  0|  26|          13|          13|
+    +-------------------------------------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------+-----+-----------+-----+-----------+
+    |            Name            | LUT | Input Size| Bits| Total Bits|
+    +----------------------------+-----+-----------+-----+-----------+
+    |Stage_I_1_address0          |   65|         16|   12|        192|
+    |Stage_I_1_ce0               |   65|         16|    1|         16|
+    |Stage_I_1_d0                |   14|          3|   32|         96|
+    |Stage_I_1_we0               |   14|          3|    1|          3|
+    |Stage_I_address0            |   65|         16|   12|        192|
+    |Stage_I_address1            |   14|          3|   12|         36|
+    |Stage_I_ce0                 |   65|         16|    1|         16|
+    |Stage_I_ce1                 |   14|          3|    1|          3|
+    |Stage_I_d0                  |   65|         14|   32|        448|
+    |Stage_I_we0                 |   65|         14|    1|         14|
+    |Stage_R_1_address0          |   65|         16|   12|        192|
+    |Stage_R_1_ce0               |   65|         16|    1|         16|
+    |Stage_R_1_d0                |   14|          3|   32|         96|
+    |Stage_R_1_we0               |   14|          3|    1|          3|
+    |Stage_R_address0            |   65|         16|   12|        192|
+    |Stage_R_address1            |   14|          3|   12|         36|
+    |Stage_R_ce0                 |   65|         16|    1|         16|
+    |Stage_R_ce1                 |   14|          3|    1|          3|
+    |Stage_R_d0                  |   65|         14|   32|        448|
+    |Stage_R_we0                 |   65|         14|    1|         14|
+    |ap_NS_fsm                   |  245|         57|    1|         57|
+    |grp_fft_stage_fu_254_stage  |   65|         13|    4|         52|
+    |inStrm_TREADY_int_regslice  |    9|          2|    1|          2|
+    +----------------------------+-----+-----------+-----+-----------+
+    |Total                       | 1211|        280|  216|       2143|
+    +----------------------------+-----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------------------------------------------+----+----+-----+-----------+
+    |                               Name                              | FF | LUT| Bits| Const Bits|
+    +-----------------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                        |  56|   0|   56|          0|
+    |grp_fft_stage_fu_254_ap_start_reg                                |   1|   0|    1|          0|
+    |grp_fft_streaming_Pipeline_10_fu_309_ap_start_reg                |   1|   0|    1|          0|
+    |grp_fft_streaming_Pipeline_11_fu_315_ap_start_reg                |   1|   0|    1|          0|
+    |grp_fft_streaming_Pipeline_12_fu_321_ap_start_reg                |   1|   0|    1|          0|
+    |grp_fft_streaming_Pipeline_13_fu_327_ap_start_reg                |   1|   0|    1|          0|
+    |grp_fft_streaming_Pipeline_14_fu_333_ap_start_reg                |   1|   0|    1|          0|
+    |grp_fft_streaming_Pipeline_15_fu_339_ap_start_reg                |   1|   0|    1|          0|
+    |grp_fft_streaming_Pipeline_16_fu_345_ap_start_reg                |   1|   0|    1|          0|
+    |grp_fft_streaming_Pipeline_17_fu_351_ap_start_reg                |   1|   0|    1|          0|
+    |grp_fft_streaming_Pipeline_18_fu_357_ap_start_reg                |   1|   0|    1|          0|
+    |grp_fft_streaming_Pipeline_19_fu_363_ap_start_reg                |   1|   0|    1|          0|
+    |grp_fft_streaming_Pipeline_20_fu_369_ap_start_reg                |   1|   0|    1|          0|
+    |grp_fft_streaming_Pipeline_21_fu_375_ap_start_reg                |   1|   0|    1|          0|
+    |grp_fft_streaming_Pipeline_22_fu_381_ap_start_reg                |   1|   0|    1|          0|
+    |grp_fft_streaming_Pipeline_23_fu_387_ap_start_reg                |   1|   0|    1|          0|
+    |grp_fft_streaming_Pipeline_24_fu_393_ap_start_reg                |   1|   0|    1|          0|
+    |grp_fft_streaming_Pipeline_25_fu_399_ap_start_reg                |   1|   0|    1|          0|
+    |grp_fft_streaming_Pipeline_26_fu_405_ap_start_reg                |   1|   0|    1|          0|
+    |grp_fft_streaming_Pipeline_3_fu_242_ap_start_reg                 |   1|   0|    1|          0|
+    |grp_fft_streaming_Pipeline_4_fu_248_ap_start_reg                 |   1|   0|    1|          0|
+    |grp_fft_streaming_Pipeline_5_fu_279_ap_start_reg                 |   1|   0|    1|          0|
+    |grp_fft_streaming_Pipeline_6_fu_285_ap_start_reg                 |   1|   0|    1|          0|
+    |grp_fft_streaming_Pipeline_7_fu_291_ap_start_reg                 |   1|   0|    1|          0|
+    |grp_fft_streaming_Pipeline_8_fu_297_ap_start_reg                 |   1|   0|    1|          0|
+    |grp_fft_streaming_Pipeline_9_fu_303_ap_start_reg                 |   1|   0|    1|          0|
+    |grp_fft_streaming_Pipeline_VITIS_LOOP_123_2_fu_411_ap_start_reg  |   1|   0|    1|          0|
+    |grp_fft_streaming_Pipeline_VITIS_LOOP_32_1_fu_234_ap_start_reg   |   1|   0|    1|          0|
+    |grp_fft_streaming_Pipeline_VITIS_LOOP_89_1_fu_202_ap_start_reg   |   1|   0|    1|          0|
+    +-----------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                            |  84|   0|   84|          0|
+    +-----------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------+-----+-----+------------+------------------+--------------+
+|       RTL Ports       | Dir | Bits|  Protocol  |   Source Object  |    C Type    |
++-----------------------+-----+-----+------------+------------------+--------------+
+|s_axi_control_AWVALID  |   in|    1|       s_axi|           control|        scalar|
+|s_axi_control_AWREADY  |  out|    1|       s_axi|           control|        scalar|
+|s_axi_control_AWADDR   |   in|    4|       s_axi|           control|        scalar|
+|s_axi_control_WVALID   |   in|    1|       s_axi|           control|        scalar|
+|s_axi_control_WREADY   |  out|    1|       s_axi|           control|        scalar|
+|s_axi_control_WDATA    |   in|   32|       s_axi|           control|        scalar|
+|s_axi_control_WSTRB    |   in|    4|       s_axi|           control|        scalar|
+|s_axi_control_ARVALID  |   in|    1|       s_axi|           control|        scalar|
+|s_axi_control_ARREADY  |  out|    1|       s_axi|           control|        scalar|
+|s_axi_control_ARADDR   |   in|    4|       s_axi|           control|        scalar|
+|s_axi_control_RVALID   |  out|    1|       s_axi|           control|        scalar|
+|s_axi_control_RREADY   |   in|    1|       s_axi|           control|        scalar|
+|s_axi_control_RDATA    |  out|   32|       s_axi|           control|        scalar|
+|s_axi_control_RRESP    |  out|    2|       s_axi|           control|        scalar|
+|s_axi_control_BVALID   |  out|    1|       s_axi|           control|        scalar|
+|s_axi_control_BREADY   |   in|    1|       s_axi|           control|        scalar|
+|s_axi_control_BRESP    |  out|    2|       s_axi|           control|        scalar|
+|ap_local_block         |  out|    1|  ap_ctrl_hs|     fft_streaming|  return value|
+|ap_clk                 |   in|    1|  ap_ctrl_hs|     fft_streaming|  return value|
+|ap_rst_n               |   in|    1|  ap_ctrl_hs|     fft_streaming|  return value|
+|interrupt              |  out|    1|  ap_ctrl_hs|     fft_streaming|  return value|
+|inStrm_TDATA           |   in|   64|        axis|   inStrm_V_data_V|       pointer|
+|inStrm_TVALID          |   in|    1|        axis|   inStrm_V_dest_V|       pointer|
+|inStrm_TREADY          |  out|    1|        axis|   inStrm_V_dest_V|       pointer|
+|inStrm_TDEST           |   in|    1|        axis|   inStrm_V_dest_V|       pointer|
+|inStrm_TKEEP           |   in|    8|        axis|   inStrm_V_keep_V|       pointer|
+|inStrm_TSTRB           |   in|    8|        axis|   inStrm_V_strb_V|       pointer|
+|inStrm_TUSER           |   in|    1|        axis|   inStrm_V_user_V|       pointer|
+|inStrm_TLAST           |   in|    1|        axis|   inStrm_V_last_V|       pointer|
+|inStrm_TID             |   in|    1|        axis|     inStrm_V_id_V|       pointer|
+|outStrm_TDATA          |  out|   64|        axis|  outStrm_V_data_V|       pointer|
+|outStrm_TVALID         |  out|    1|        axis|  outStrm_V_dest_V|       pointer|
+|outStrm_TREADY         |   in|    1|        axis|  outStrm_V_dest_V|       pointer|
+|outStrm_TDEST          |  out|    1|        axis|  outStrm_V_dest_V|       pointer|
+|outStrm_TKEEP          |  out|    8|        axis|  outStrm_V_keep_V|       pointer|
+|outStrm_TSTRB          |  out|    8|        axis|  outStrm_V_strb_V|       pointer|
+|outStrm_TUSER          |  out|    1|        axis|  outStrm_V_user_V|       pointer|
+|outStrm_TLAST          |  out|    1|        axis|  outStrm_V_last_V|       pointer|
+|outStrm_TID            |  out|    1|        axis|    outStrm_V_id_V|       pointer|
++-----------------------+-----+-----+------------+------------------+--------------+
+

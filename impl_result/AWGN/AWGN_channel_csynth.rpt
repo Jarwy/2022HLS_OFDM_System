@@ -1,0 +1,198 @@
+
+
+================================================================
+== Vitis HLS Report for 'AWGN_channel'
+================================================================
+* Date:           Thu Jun 23 11:13:46 2022
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+* Project:        AWGN_HLS
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+-----------+------------+
+    |  Clock |  Target  | Estimated | Uncertainty|
+    +--------+----------+-----------+------------+
+    |ap_clk  |  10.00 ns|  15.303 ns|     2.70 ns|
+    +--------+----------+-----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+--------+--------+---------+
+    |  Latency (cycles) |  Latency (absolute) |     Interval    | Pipeline|
+    |   min   |   max   |    min   |    max   |   min  |   max  |   Type  |
+    +---------+---------+----------+----------+--------+--------+---------+
+    |   307516|   307516|  4.706 ms|  4.706 ms|  307517|  307517|       no|
+    +---------+---------+----------+----------+--------+--------+---------+
+
+    + Detail: 
+        * Instance: 
+        +------------------------------------------------------+-------------------------------------------+---------+---------+----------+----------+--------+--------+---------+
+        |                                                      |                                           |  Latency (cycles) |  Latency (absolute) |     Interval    | Pipeline|
+        |                       Instance                       |                   Module                  |   min   |   max   |    min   |    max   |   min  |   max  |   Type  |
+        +------------------------------------------------------+-------------------------------------------+---------+---------+----------+----------+--------+--------+---------+
+        |grp_pow_generic_double_s_fu_106                       |pow_generic_double_s                       |       34|       34|  0.520 us|  0.520 us|       1|       1|      yes|
+        |grp_AWGN_channel_Pipeline_AWGN_channel_label0_fu_117  |AWGN_channel_Pipeline_AWGN_channel_label0  |   307328|   307328|  4.703 ms|  4.703 ms|  307328|  307328|       no|
+        +------------------------------------------------------+-------------------------------------------+---------+---------+----------+----------+--------+--------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|      2|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        5|  105|    9537|  13143|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|   1133|    -|
+|Register         |        -|    -|     767|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        5|  105|   10304|  14278|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        1|   47|       9|     26|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +------------------------------------------------------+-------------------------------------------+---------+----+------+------+-----+
+    |                       Instance                       |                   Module                  | BRAM_18K| DSP|  FF  |  LUT | URAM|
+    +------------------------------------------------------+-------------------------------------------+---------+----+------+------+-----+
+    |grp_AWGN_channel_Pipeline_AWGN_channel_label0_fu_117  |AWGN_channel_Pipeline_AWGN_channel_label0  |        0|  69|  4478|  6038|    0|
+    |CRTL_BUS_s_axi_U                                      |CRTL_BUS_s_axi                             |        0|   0|    77|    74|    0|
+    |ddiv_64ns_64ns_64_59_no_dsp_1_U56                     |ddiv_64ns_64ns_64_59_no_dsp_1              |        0|   0|     0|     0|    0|
+    |dmul_64ns_64ns_64_7_max_dsp_1_U55                     |dmul_64ns_64ns_64_7_max_dsp_1              |        0|  11|   342|   586|    0|
+    |dsqrt_64ns_64ns_64_57_no_dsp_1_U58                    |dsqrt_64ns_64ns_64_57_no_dsp_1             |        0|   0|     0|     0|    0|
+    |fdiv_32ns_32ns_32_16_no_dsp_1_U52                     |fdiv_32ns_32ns_32_16_no_dsp_1              |        0|   0|     0|     0|    0|
+    |fpext_32ns_64_2_no_dsp_1_U54                          |fpext_32ns_64_2_no_dsp_1                   |        0|   0|     0|     0|    0|
+    |fptrunc_64ns_32_2_no_dsp_1_U53                        |fptrunc_64ns_32_2_no_dsp_1                 |        0|   0|     0|     0|    0|
+    |grp_pow_generic_double_s_fu_106                       |pow_generic_double_s                       |        5|  25|  4640|  6445|    0|
+    |uitodp_32ns_64_6_no_dsp_1_U57                         |uitodp_32ns_64_6_no_dsp_1                  |        0|   0|     0|     0|    0|
+    +------------------------------------------------------+-------------------------------------------+---------+----+------+------+-----+
+    |Total                                                 |                                           |        5| 105|  9537| 13143|    0|
+    +------------------------------------------------------+-------------------------------------------+---------+----+------+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |                            Variable Name                            | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |grp_AWGN_channel_Pipeline_AWGN_channel_label0_fu_117_OutStrm_TREADY  |       and|   0|  0|   2|           1|           1|
+    +---------------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                                                |          |   0|  0|   2|           1|           1|
+    +---------------------------------------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------+------+-----------+-----+-----------+
+    |            Name            |  LUT | Input Size| Bits| Total Bits|
+    +----------------------------+------+-----------+-----+-----------+
+    |ap_NS_fsm                   |  1012|        190|    1|        190|
+    |grp_fu_159_ce               |     9|          2|    1|          2|
+    |grp_fu_159_p0               |    20|          4|   64|        256|
+    |grp_fu_162_ce               |     9|          2|    1|          2|
+    |grp_fu_162_p0               |    14|          3|   32|         96|
+    |grp_fu_165_ce               |     9|          2|    1|          2|
+    |grp_fu_165_p0               |    14|          3|   64|        192|
+    |grp_fu_165_p1               |    14|          3|   64|        192|
+    |grp_fu_178_ce               |     9|          2|    1|          2|
+    |grp_fu_178_p1               |    14|          3|   64|        192|
+    |inStrm_TREADY_int_regslice  |     9|          2|    1|          2|
+    +----------------------------+------+-----------+-----+-----------+
+    |Total                       |  1133|        216|  294|       1128|
+    +----------------------------+------+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------------------------------------------------+-----+----+-----+-----------+
+    |                                Name                               |  FF | LUT| Bits| Const Bits|
+    +-------------------------------------------------------------------+-----+----+-----+-----------+
+    |ap_CS_fsm                                                          |  189|   0|  189|          0|
+    |conv6_reg_259                                                      |   64|   0|   64|          0|
+    |conv_i_reg_239                                                     |   64|   0|   64|          0|
+    |div7_reg_264                                                       |   64|   0|   64|          0|
+    |div_reg_254                                                        |   32|   0|   32|          0|
+    |grp_AWGN_channel_Pipeline_AWGN_channel_label0_fu_117_ap_start_reg  |    1|   0|    1|          0|
+    |grp_pow_generic_double_s_fu_106_ap_start_reg                       |    1|   0|    1|          0|
+    |p_y_assign_reg_244                                                 |   64|   0|   64|          0|
+    |reg_183                                                            |   32|   0|   32|          0|
+    |seed1                                                              |   64|   0|   64|          0|
+    |seed2                                                              |   64|   0|   64|          0|
+    |tmp_reg_249                                                        |   64|   0|   64|          0|
+    |tmp_s_reg_269                                                      |   64|   0|   64|          0|
+    +-------------------------------------------------------------------+-----+----+-----+-----------+
+    |Total                                                              |  767|   0|  767|          0|
+    +-------------------------------------------------------------------+-----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------+-----+-----+------------+------------------+--------------+
+|        RTL Ports       | Dir | Bits|  Protocol  |   Source Object  |    C Type    |
++------------------------+-----+-----+------------+------------------+--------------+
+|s_axi_CRTL_BUS_AWVALID  |   in|    1|       s_axi|          CRTL_BUS|        scalar|
+|s_axi_CRTL_BUS_AWREADY  |  out|    1|       s_axi|          CRTL_BUS|        scalar|
+|s_axi_CRTL_BUS_AWADDR   |   in|    6|       s_axi|          CRTL_BUS|        scalar|
+|s_axi_CRTL_BUS_WVALID   |   in|    1|       s_axi|          CRTL_BUS|        scalar|
+|s_axi_CRTL_BUS_WREADY   |  out|    1|       s_axi|          CRTL_BUS|        scalar|
+|s_axi_CRTL_BUS_WDATA    |   in|   32|       s_axi|          CRTL_BUS|        scalar|
+|s_axi_CRTL_BUS_WSTRB    |   in|    4|       s_axi|          CRTL_BUS|        scalar|
+|s_axi_CRTL_BUS_ARVALID  |   in|    1|       s_axi|          CRTL_BUS|        scalar|
+|s_axi_CRTL_BUS_ARREADY  |  out|    1|       s_axi|          CRTL_BUS|        scalar|
+|s_axi_CRTL_BUS_ARADDR   |   in|    6|       s_axi|          CRTL_BUS|        scalar|
+|s_axi_CRTL_BUS_RVALID   |  out|    1|       s_axi|          CRTL_BUS|        scalar|
+|s_axi_CRTL_BUS_RREADY   |   in|    1|       s_axi|          CRTL_BUS|        scalar|
+|s_axi_CRTL_BUS_RDATA    |  out|   32|       s_axi|          CRTL_BUS|        scalar|
+|s_axi_CRTL_BUS_RRESP    |  out|    2|       s_axi|          CRTL_BUS|        scalar|
+|s_axi_CRTL_BUS_BVALID   |  out|    1|       s_axi|          CRTL_BUS|        scalar|
+|s_axi_CRTL_BUS_BREADY   |   in|    1|       s_axi|          CRTL_BUS|        scalar|
+|s_axi_CRTL_BUS_BRESP    |  out|    2|       s_axi|          CRTL_BUS|        scalar|
+|ap_local_block          |  out|    1|  ap_ctrl_hs|      AWGN_channel|  return value|
+|ap_clk                  |   in|    1|  ap_ctrl_hs|      AWGN_channel|  return value|
+|ap_rst_n                |   in|    1|  ap_ctrl_hs|      AWGN_channel|  return value|
+|interrupt               |  out|    1|  ap_ctrl_hs|      AWGN_channel|  return value|
+|inStrm_TDATA            |   in|   64|        axis|   inStrm_V_data_V|       pointer|
+|inStrm_TVALID           |   in|    1|        axis|   inStrm_V_dest_V|       pointer|
+|inStrm_TREADY           |  out|    1|        axis|   inStrm_V_dest_V|       pointer|
+|inStrm_TDEST            |   in|    1|        axis|   inStrm_V_dest_V|       pointer|
+|inStrm_TKEEP            |   in|    8|        axis|   inStrm_V_keep_V|       pointer|
+|inStrm_TSTRB            |   in|    8|        axis|   inStrm_V_strb_V|       pointer|
+|inStrm_TUSER            |   in|    1|        axis|   inStrm_V_user_V|       pointer|
+|inStrm_TLAST            |   in|    1|        axis|   inStrm_V_last_V|       pointer|
+|inStrm_TID              |   in|    1|        axis|     inStrm_V_id_V|       pointer|
+|OutStrm_TDATA           |  out|   64|        axis|  OutStrm_V_data_V|       pointer|
+|OutStrm_TVALID          |  out|    1|        axis|  OutStrm_V_dest_V|       pointer|
+|OutStrm_TREADY          |   in|    1|        axis|  OutStrm_V_dest_V|       pointer|
+|OutStrm_TDEST           |  out|    1|        axis|  OutStrm_V_dest_V|       pointer|
+|OutStrm_TKEEP           |  out|    8|        axis|  OutStrm_V_keep_V|       pointer|
+|OutStrm_TSTRB           |  out|    8|        axis|  OutStrm_V_strb_V|       pointer|
+|OutStrm_TUSER           |  out|    1|        axis|  OutStrm_V_user_V|       pointer|
+|OutStrm_TLAST           |  out|    1|        axis|  OutStrm_V_last_V|       pointer|
+|OutStrm_TID             |  out|    1|        axis|    OutStrm_V_id_V|       pointer|
++------------------------+-----+-----+------------+------------------+--------------+
+
