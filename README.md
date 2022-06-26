@@ -1,5 +1,5 @@
-#OFDM System
-##Table of Contents
+# OFDM System
+## Table of Contents
 + OFDM System
 	* [OVERVIEW](#OVERVIEW)
 	* [SOFTWARE TOOLS AND SYSTEM REQUIREMENTS](#SOFTWARE TOOLS AND SYSTEM REQUIREMENTS)
@@ -9,17 +9,17 @@
 	* [References](#References)
 	* [SUPPORT](#SUPPORT)
 
-##OVERVIEW
+## OVERVIEW
 Build a basic OFDM system and implement it in Xilinx's FPGA PYNQ-z2. The system will get 256 input samples and each of samples is an 64 bits unsigned integer data. We use modulation IP which implements 16 points QAM, iFFT IP and cyclic prefix IP to generate transmitted signal. Also we use AWGN and Rayleigh IP to add noise to the signal. Then the system will decode the received data with CyclicPrefixRemoval IP, FFT IP and demodulation IP.
 ###OFDM architecture block diagram
 ![ofdm architecture](https://www.gaussianwaves.com/gaussianwaves/wp-content/uploads/2012/06/Cyclic_prefix_OFDM_architecture.jpg)
 
-##SOFTWARE TOOLS AND SYSTEM REQUIREMENTS
+## SOFTWARE TOOLS AND SYSTEM REQUIREMENTS
 * Vitis HLS 2021.2
 * Vivado 2021.2
 * Python 3
 
-##DESIGN FILE HIERARCHY
+## DESIGN FILE HIERARCHY
 ```
 |   README.md
 	\---Design IP
@@ -58,8 +58,8 @@ Build a basic OFDM system and implement it in Xilinx's FPGA PYNQ-z2. The system 
 			QAM16_d_tb.cpp
 ```
 
-##Usage
-###1.Generate and export IP package with Vitis HLS
+## Usage
+### 1.Generate and export IP package with Vitis HLS
 * open Vitis HLS
 
 * create new project
@@ -78,7 +78,7 @@ Build a basic OFDM system and implement it in Xilinx's FPGA PYNQ-z2. The system 
 
 * choose Export RTL
 
-###2.Use command lines to Generate and export IP package
+### 2.Use command lines to Generate and export IP package
 * open Vitis HLS Command Prompt
 
 ```
@@ -101,7 +101,7 @@ export_design -format ip_catalog
 ```
 Then you can get IP package file "export.zip" as default in path: "Project_name/solution1/impl"
 
-###Use Vivado to generate Bit-stream file and implement design in FPGA
+### Use Vivado to generate Bit-stream file and implement design in FPGA
 * open Vivado
 
 * create new project
@@ -125,21 +125,21 @@ Then you can get IP package file "export.zip" as default in path: "Project_name/
 
 * get the result
 
-##Result
-###AWGN Channel Implementation (Cont.)
+## Result
+### AWGN Channel Implementation (Cont.)
 ![AWGN](https://imgur.com/KLB88vk.jpg)
-###Rayleigh Channel Implementation (Cont.)
+### Rayleigh Channel Implementation (Cont.)
 ![Rayleigh](https://imgur.com/ckgLakX.jpg)
-###16 QAM Constellation Diagram
+### 16 QAM Constellation Diagram
 ![QAM_16](https://imgur.com/kHvOBVf.jpg)
 
-##References
+## References
 * [OFDM and Multi-Channel Communication Systems](https://www.ni.com/zh-tw/innovations/white-papers/06/ofdm-and-multi-channel-communication-systems.html)
 * [Introduction to OFDM – orthogonal Frequency division multiplexing – part 4 – Cyclic Prefix](https://www.gaussianwaves.com/2011/07/introduction-to-ofdm-orthogonal-frequency-division-multiplexing-part-4-cyclic-prefix/)
 * [GitHub: PYNQ_Composable_Pipeline](https://github.com/Xilinx/PYNQ_Composable_Pipeline)
 * [Quadrature Amplitude Modulation](https://zh.wikipedia.org/wiki/%E6%AD%A3%E4%BA%A4%E5%B9%85%E5%BA%A6%E8%B0%83%E5%88%B6)
 * [FFT original code]()
 
-##SUPPORT
+## SUPPORT
 You can find some solution and suggestion about this project or your own projects on [Xilinx Support](https://support.xilinx.com/s/?language=en_US) website.
 
